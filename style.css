@@ -1,0 +1,79 @@
+html, body { margin: 0; padding: 0; background: #060607; }
+body { font-family: 'Barlow', Helvetica, sans-serif; cursor: none; }
+a, button { cursor: none; font-family: inherit; }
+a { color: #d22c20; text-decoration: none; }
+a:hover { color: #ef3b2d; }
+::selection { background: #d22c20; color: #fff; }
+
+@keyframes marqueeLoop {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes marqueeLoopRev {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.4; }
+  94% { opacity: 1; }
+  97% { opacity: 0.7; }
+  98% { opacity: 1; }
+}
+/* scroll cue: light sweep across the label (premium detail, desktop) */
+.cue-label {
+  background: linear-gradient(100deg, #6e6b65 0%, #6e6b65 40%, #d8d4cb 50%, #6e6b65 60%, #6e6b65 100%);
+  background-size: 260% 100%;
+  background-position: 120% 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: cueShimmer 5.5s ease-in-out infinite;
+}
+@keyframes cueShimmer {
+  0%, 45% { background-position: 120% 0; }
+  90%, 100% { background-position: -140% 0; }
+}
+
+/* scroll cue: hover lights it up (pointer devices only) */
+@media (hover: hover) {
+  #heroCtas a.cue:hover { opacity: 1 !important; }
+  #heroCtas a.cue:hover .cue-arrow { color: #d22c20 !important; }
+  #heroCtas a.cue:hover .cue-line { background: rgba(240,237,231,0.24) !important; }
+}
+
+/* scroll cue: simplified mobile version */
+@media (max-width: 640px) {
+  #heroCtas { bottom: 72px !important; }
+  .cue-label {
+    animation: none;
+    background: none;
+    -webkit-text-fill-color: currentColor;
+    color: #8a8781;
+    font-size: 10px !important;
+    letter-spacing: 4px !important;
+  }
+  .cue-line { height: 24px !important; }
+  .foot-scroll { display: none; } /* duplicated by the cue; frees space in the foot */
+  #heroFoot > div { font-size: 12px !important; letter-spacing: 3px !important; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .cue-label { animation: none; background: none; -webkit-text-fill-color: currentColor; color: #8a8781; }
+  .cue-line > span, .cue-arrow { animation: none !important; }
+  .cue-line > span { opacity: 0.6; }
+}
+
+@keyframes scrollPulse {
+  0% { transform: translateY(-110%); opacity: 0; }
+  18% { opacity: 1; }
+  100% { transform: translateY(240%); opacity: 0; }
+}
+@keyframes arrowBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.55; }
+  50% { transform: translateY(5px); opacity: 1; }
+}
+@media (hover: none) { body, a, button { cursor: auto; } }
+
+button { border: none; }
