@@ -1,4 +1,4 @@
-// DEDEDEE — Big Papa 313 landing
+// DEDEDEE — Big Papa313 landing
 // Vanilla JS port of the original Claude Design artifact (x-dc / sc-if / sc-for template).
 
 (function () {
@@ -82,7 +82,7 @@
       }
       const featsLine = document.createElement('div');
       featsLine.style.cssText = 'font-size: 15px; color: #77746e';
-      featsLine.textContent = 'Big Papa 313 · ' + t.feats;
+      featsLine.textContent = 'Big Papa313 · ' + t.feats;
       mid.appendChild(titleLine);
       mid.appendChild(featsLine);
 

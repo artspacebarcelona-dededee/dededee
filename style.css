@@ -5,6 +5,19 @@ a { color: #d22c20; text-decoration: none; }
 a:hover { color: #ef3b2d; }
 ::selection { background: #d22c20; color: #fff; }
 
+/* nav / footer links: same look as the static labels they replace, subtle lighten on hover */
+.nav-link { color: #8a8781; transition: color 0.3s; }
+.nav-link:hover { color: #f0ede7; }
+.credit-link { color: #55524c; transition: color 0.3s; }
+.credit-link:hover { color: #8a8781; }
+
+/* "3 continentes" accent: soft pulsing glow */
+.glow-accent { color: #d22c20; animation: glowPulse 3s ease-in-out infinite alternate; }
+@keyframes glowPulse {
+  from { text-shadow: 0 0 4px rgba(210,44,32,0.3); }
+  to { text-shadow: 0 0 14px rgba(210,44,32,0.8); }
+}
+
 @keyframes marqueeLoop {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }

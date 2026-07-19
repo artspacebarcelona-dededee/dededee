@@ -1,6 +1,6 @@
 # DEDEDEE — Landing · Contexto del proyecto
 
-Landing de una sola página para **DEDEDEE Vol. 1**, la mixtape de **Big Papa 313** (Zero Games Records). 15 canciones, 42 min, 19 artistas de tres continentes. La nav tiene un toggle **Vol. 1 / Vol. 2**: Vol. 1 es el contenido real (hero, tracklist, artistas, plataformas) y Vol. 2 es un placeholder "Próximamente".
+Landing de una sola página para **DEDEDEE Vol. 1**, la mixtape de **Big Papa313** (Zero Games Records). 15 canciones, 42 min, 19 artistas de 3 continentes. La nav tiene un toggle **Vol. 1 / Vol. 2**: Vol. 1 es el contenido real (hero, tracklist, artistas, plataformas) y Vol. 2 es un placeholder "Próximamente".
 
 ## Origen
 

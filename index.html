@@ -3,12 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DEDEDEE — Big Papa 313</title>
+<title>DEDEDEE — Big Papa313</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 </head>
 <body>
 
@@ -30,9 +30,10 @@
 
   <!-- NAV -->
   <nav style="position: fixed; top: 0; left: 0; right: 0; z-index: 50; display: flex; align-items: center; justify-content: space-between; padding: 22px 46px; background: linear-gradient(rgba(6,6,7,0.75), rgba(6,6,7,0)); backdrop-filter: blur(3px)">
-    <div style="display: flex; align-items: baseline; gap: 14px">
+    <div style="display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap">
       <div style="font-family: 'Archivo Black', sans-serif; font-size: 17px; letter-spacing: 1px; color: #f0ede7">DEDEDEE<span style="color: #d22c20">®</span></div>
-      <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 4px; color: #8a8781; text-transform: uppercase">Big Papa 313</div>
+      <a href="https://www.instagram.com/big_papa313/" target="_blank" rel="noopener noreferrer" data-hover="1" class="nav-link" style="font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 4px; text-transform: uppercase">Big Papa313</a>
+      <a href="https://www.zerogamesrecords.es/" target="_blank" rel="noopener noreferrer" data-hover="1" class="nav-link" style="font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 4px; text-transform: uppercase">Zero Games Records</a>
     </div>
     <div style="display: flex; gap: 10px; align-items: center">
       <button id="volBtn1" data-hover="1" style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 3px; padding: 9px 24px; border-radius: 999px; text-transform: uppercase; backdrop-filter: blur(16px) saturate(1.4); -webkit-backdrop-filter: blur(16px) saturate(1.4); box-shadow: inset 0 1px 0 rgba(255,255,255,0.22), inset 0 -8px 16px rgba(255,255,255,0.03), 0 8px 24px rgba(0,0,0,0.35); transition: all 0.3s">01 — Vol. 1</button>
@@ -53,7 +54,7 @@
 
       <div id="stampScene" data-hover="1" style="position: absolute; top: 50%; left: 50%; transform-style: preserve-3d">
         <div id="stamp3d" style="transform-style: preserve-3d">
-          <img id="stampImg" src="assets/logo-stamp-cutout.png" alt="DEDEDEE Vol. 1" style="width: clamp(320px, 44vw, 620px); display: block; filter: drop-shadow(0 0 70px rgba(210,44,32,0.35)) drop-shadow(0 26px 40px rgba(0,0,0,0.6))">
+          <img id="stampImg" src="assets/logo-stamp-cutout.png" alt="DEDEDEE Vol. 1" width="300" height="300" style="width: clamp(320px, 44vw, 620px); height: auto; aspect-ratio: 1 / 1; display: block; filter: drop-shadow(0 0 70px rgba(210,44,32,0.35)) drop-shadow(0 26px 40px rgba(0,0,0,0.6))">
         </div>
       </div>
 
@@ -90,7 +91,7 @@
     <section id="artistas" style="background: #0a0a0b; padding: 150px 0 150px 0; position: relative; overflow: hidden">
       <div style="padding: 0 6vw; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-bottom: 22px; flex-wrap: wrap">
         <h2 data-split="1" class="reveal" style="font-family: 'Archivo Black', sans-serif; font-size: clamp(48px, 8vw, 112px); margin: 0; line-height: 0.9; color: #f0ede7">ARTISTAS</h2>
-        <div class="reveal" style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 4px; color: #66635d; text-transform: uppercase; padding-bottom: 12px">19 invitados — tres continentes</div>
+        <div class="reveal" style="font-family: 'Barlow Condensed', sans-serif; font-size: 15px; letter-spacing: 4px; color: #66635d; text-transform: uppercase; padding-bottom: 12px">19 invitados — <span class="glow-accent">3 continentes</span></div>
       </div>
       <div style="height: 2px; background: #d22c20; width: 88vw; margin: 0 6vw 70px 6vw"></div>
 
@@ -107,12 +108,12 @@
       <div style="position: absolute; bottom: 40px; right: 4vw; font-family: 'Archivo Black', sans-serif; font-size: 15vw; color: rgba(240,237,231,0.025); pointer-events: none; line-height: 1">02</div>
       <div id="coverScene" data-hover="1" style="position: relative; transform-style: preserve-3d">
         <div style="position: absolute; top: 8%; left: -6%; width: 112%; height: 100%; background: radial-gradient(circle, rgba(210,44,32,0.14) 0%, transparent 70%); pointer-events: none"></div>
-        <img id="coverImg" src="assets/cover-vol1.jpg" alt="Portada Dededee Vol. 1" style="width: 100%; display: block; box-shadow: 0 60px 100px rgba(0,0,0,0.65)">
+        <img id="coverImg" src="assets/cover-vol1.jpg" alt="Portada Dededee Vol. 1" width="1800" height="2400" style="width: 100%; height: auto; aspect-ratio: 3 / 4; display: block; box-shadow: 0 60px 100px rgba(0,0,0,0.65)">
       </div>
       <div>
         <h2 data-split="1" class="reveal" style="font-family: 'Archivo Black', sans-serif; font-size: clamp(40px, 5.5vw, 86px); margin: 0 0 8px 0; line-height: 0.95; color: #f0ede7">YA DISPONIBLE</h2>
         <div class="reveal" style="font-family: 'Archivo Black', sans-serif; font-size: clamp(26px, 3.2vw, 48px); color: #d22c20; margin-bottom: 28px">EN TODAS LAS PLATAFORMAS</div>
-        <p class="reveal" style="font-size: 18px; color: #a09c94; max-width: 520px; margin: 0 0 44px 0; line-height: 1.65">El primer volumen de la serie DEDEDEE. Big Papa 313 junta a 19 artistas de tres continentes en 15 canciones.</p>
+        <p class="reveal" style="font-size: 18px; color: #a09c94; max-width: 520px; margin: 0 0 44px 0; line-height: 1.65">El primer volumen de la serie DEDEDEE. Big Papa313 junta a 19 artistas de 3 continentes en 15 canciones.</p>
         <div id="platformsWrap" class="reveal" style="display: flex; flex-wrap: wrap; gap: 12px"></div>
       </div>
     </section>
@@ -127,7 +128,7 @@
 
       <div id="v2stampScene" style="transform-style: preserve-3d; position: relative; margin-bottom: 60px">
         <div id="v2stamp" style="transform-style: preserve-3d; position: relative; animation: flicker 5s linear infinite">
-          <img src="assets/logo-stamp-cutout.png" alt="DEDEDEE Vol. 2" style="width: clamp(240px, 30vw, 420px); display: block; filter: grayscale(0.85) brightness(1.6) opacity(0.5) drop-shadow(0 20px 40px rgba(0,0,0,0.6))">
+          <img src="assets/logo-stamp-cutout.png" alt="DEDEDEE Vol. 2" width="300" height="300" style="width: clamp(240px, 30vw, 420px); height: auto; aspect-ratio: 1 / 1; display: block; filter: grayscale(0.85) brightness(1.6) opacity(0.5) drop-shadow(0 20px 40px rgba(0,0,0,0.6))">
           <div style="position: absolute; top: 34%; right: 2%; font-family: 'Archivo Black', sans-serif; font-size: clamp(16px, 2vw, 26px); color: #d22c20; transform: rotate(-13deg); background: #060607; padding: 2px 10px; border: 3px solid #d22c20">VOL. 2</div>
         </div>
       </div>
@@ -140,11 +141,12 @@
   <!-- FOOTER -->
   <footer style="background: #060607; border-top: 1px solid #1a1a1c; padding: 46px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px">
     <div style="font-family: 'Archivo Black', sans-serif; font-size: 15px; color: #f0ede7">DEDEDEE<span style="color: #d22c20">®</span></div>
-    <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 4px; color: #55524c; text-transform: uppercase">© 2026 Zero Games Records · Big Papa 313</div>
+    <div style="font-family: 'Barlow Condensed', sans-serif; font-size: 13px; letter-spacing: 4px; color: #55524c; text-transform: uppercase">© 2026 Zero Games Records · Big Papa313</div>
+    <a href="https://www.artspacebarcelona.com/" target="_blank" rel="noopener noreferrer" data-hover="1" class="credit-link" style="font-family: 'Barlow Condensed', sans-serif; font-size: 12px; letter-spacing: 3px; text-transform: uppercase">Sitio por ArtSpace Barcelona</a>
   </footer>
 
 </div>
 
-<script src="script.js"></script>
+<script defer src="script.js"></script>
 </body>
 </html>
