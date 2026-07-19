@@ -5,22 +5,23 @@
   'use strict';
 
   // ---------- DATA ----------
+  // url: enlace de Spotify de la pista; puede ser null si alguna no está disponible
   const tracks = [
-    { num: '01', title: 'Intro', feats: 'Morad', dur: '4:06', explicit: false },
-    { num: '02', title: 'Zero Games', feats: 'JC Reyes, Gazo', dur: '1:52', explicit: true },
-    { num: '03', title: 'Me & U', feats: 'Dei V', dur: '3:09', explicit: false },
-    { num: '04', title: 'Dededee', feats: 'Hades66, Gazo', dur: '2:59', explicit: true },
-    { num: '05', title: 'Usa', feats: 'Pirlo, Santa Fe Klan', dur: '2:52', explicit: false },
-    { num: '06', title: "NIGHT IN LA'CASA", feats: 'D-Block Europe, Cyril Kamer', dur: '2:35', explicit: false },
-    { num: '07', title: 'Papier', feats: 'Zkr, JC Reyes', dur: '2:00', explicit: true },
-    { num: '08', title: 'San Juditas', feats: 'Santa Fe Klan, Slayter', dur: '2:51', explicit: false },
-    { num: '09', title: 'Mentalidad Callejera', feats: 'MC Tuto, Morad', dur: '2:30', explicit: false },
-    { num: '10', title: 'Ginger', feats: 'L.A.X, Ngaaka Blinde', dur: '3:01', explicit: false },
-    { num: '11', title: 'Marijane', feats: 'Maikel Delacalle, Konshens', dur: '2:33', explicit: false },
-    { num: '12', title: 'Olala', feats: 'Zkr, Bobby Vandamme', dur: '2:37', explicit: false },
-    { num: '13', title: 'Pokito', feats: 'Moncho Chavea, Youka', dur: '3:08', explicit: false },
-    { num: '14', title: 'Secreto', feats: 'Santa Fe Klan', dur: '3:00', explicit: false },
-    { num: '15', title: 'Mclaren', feats: 'JC Reyes', dur: '3:10', explicit: true }
+    { num: '01', title: 'Intro', feats: 'Morad', dur: '4:06', explicit: false, url: 'https://open.spotify.com/intl-es/track/1H6eI46vCYPcBaCR8i1ClE?si=486e454aaf014536' },
+    { num: '02', title: 'Zero Games', feats: 'JC Reyes, Gazo', dur: '1:52', explicit: true, url: 'https://open.spotify.com/intl-es/track/0qvKk2qERKOLswwxdFl9OP?si=74cc3fde25744975' },
+    { num: '03', title: 'Me & U', feats: 'Dei V', dur: '3:09', explicit: false, url: 'https://open.spotify.com/intl-es/track/7bORH5xCMy5fqguLITnm2W?si=50ed9b6771c5436b' },
+    { num: '04', title: 'Dededee', feats: 'Hades66, Gazo', dur: '2:59', explicit: true, url: 'https://open.spotify.com/intl-es/track/4O94aym5eWQQXUYf1gjaQQ?si=0f8929098fcd4595' },
+    { num: '05', title: 'Usa', feats: 'Pirlo, Santa Fe Klan', dur: '2:52', explicit: false, url: 'https://open.spotify.com/intl-es/track/19dqqNHDdxdPnZxV9wLTFM?si=ec8546897d804ddc' },
+    { num: '06', title: "NIGHT IN LA'CASA", feats: 'D-Block Europe, Cyril Kamer', dur: '2:35', explicit: false, url: 'https://open.spotify.com/intl-es/track/6koJDTy6OxY6SULXFr2c4r?si=4e49c1d7f0ba4214' },
+    { num: '07', title: 'Papier', feats: 'Zkr, JC Reyes', dur: '2:00', explicit: true, url: 'https://open.spotify.com/intl-es/track/4XJb47Khjv39jbRH3Xc1Sx?si=c0e2479515194f1f' },
+    { num: '08', title: 'San Juditas', feats: 'Santa Fe Klan, Slayter', dur: '2:51', explicit: false, url: 'https://open.spotify.com/intl-es/track/0QF7ykmJbNNz3liIux8Oiw?si=e256ad465eba4e0a' },
+    { num: '09', title: 'Mentalidad Callejera', feats: 'MC Tuto, Morad', dur: '2:30', explicit: false, url: 'https://open.spotify.com/intl-es/track/1wWuBsXA6i0KTjg0YZF8Bv?si=d14b1b166772493c' },
+    { num: '10', title: 'Ginger', feats: 'L.A.X, Ngaaka Blinde', dur: '3:01', explicit: false, url: 'https://open.spotify.com/intl-es/track/2JwU53RnDo7OfluNL2P3FT?si=7f8e23c2e6c044e7' },
+    { num: '11', title: 'Marijane', feats: 'Maikel Delacalle, Konshens', dur: '2:33', explicit: false, url: 'https://open.spotify.com/intl-es/track/0rsuwP027Qt1CKCKEnPtCB?si=f4733bbe2cbf40ec' },
+    { num: '12', title: 'Olala', feats: 'Zkr, Bobby Vandamme', dur: '2:37', explicit: false, url: 'https://open.spotify.com/intl-es/track/0VXTXHthHtgRoBAJoJDzBQ?si=fb67bfbb17bd4881' },
+    { num: '13', title: 'Pokito', feats: 'Moncho Chavea, Youka', dur: '3:08', explicit: false, url: 'https://open.spotify.com/intl-es/track/0iOoMKS7MmgO51fpbhuz7h?si=d3b472c7e33c4d19' },
+    { num: '14', title: 'Secreto', feats: 'Santa Fe Klan', dur: '3:00', explicit: false, url: 'https://open.spotify.com/intl-es/track/5ZKowVGhjXruf3ygAwvYVR?si=c8fcbaab674b4244' },
+    { num: '15', title: 'Mclaren', feats: 'JC Reyes', dur: '3:10', explicit: true, url: 'https://open.spotify.com/intl-es/track/5o96cIMBGWVEwBI8wWjj13?si=9fbf2fc5a8274782' }
   ];
 
   const names = ['Morad', 'JC Reyes', 'Gazo', 'Dei V', 'Hades66', 'Pirlo', 'Santa Fe Klan', 'D-Block Europe', 'Cyril Kamer', 'Zkr', 'Slayter', 'MC Tuto', 'L.A.X', 'Ngaaka Blinde', 'Maikel Delacalle', 'Konshens', 'Bobby Vandamme', 'Moncho Chavea', 'Youka'];
@@ -52,9 +53,15 @@
     const wrap = document.getElementById('trackListWrap');
     wrap.innerHTML = '';
     tracks.forEach((t) => {
-      const row = document.createElement('div');
+      // con url → <a> clicable; sin url → <div> no interactivo con el mismo aspecto
+      const row = document.createElement(t.url ? 'a' : 'div');
       row.className = 'trackrow';
-      row.dataset.hover = '1';
+      if (t.url) {
+        row.href = t.url;
+        row.target = '_blank';
+        row.rel = 'noopener noreferrer';
+        row.dataset.hover = '1';
+      }
       row.style.cssText = 'display: grid; grid-template-columns: 84px 1fr auto 44px; align-items: center; gap: 22px; padding: 21px 18px; border-bottom: 1px solid #1a1a1c; position: relative; overflow: hidden; transition: padding-left 0.3s';
 
       const fill = document.createElement('div');
