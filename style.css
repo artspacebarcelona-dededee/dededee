@@ -12,10 +12,10 @@ a:hover { color: #ef3b2d; }
 .credit-link:hover { color: #8a8781; }
 
 /* "3 continentes" accent: soft pulsing glow */
-.glow-accent { color: #d22c20; animation: glowPulse 3s ease-in-out infinite alternate; }
+.glow-accent { color: #d22c20; display: inline-block; animation: glowPulse 3s ease-in-out infinite alternate; }
 @keyframes glowPulse {
-  from { text-shadow: 0 0 4px rgba(210,44,32,0.3); }
-  to { text-shadow: 0 0 14px rgba(210,44,32,0.8); }
+  from { color: #d22c20; text-shadow: 0 0 6px rgba(210,44,32,0.45); transform: scale(1); }
+  to { color: #ef3b2d; text-shadow: 0 0 20px rgba(210,44,32,0.95); transform: scale(1.02); }
 }
 
 @keyframes marqueeLoop {
